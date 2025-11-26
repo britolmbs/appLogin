@@ -20,4 +20,33 @@ public class Usuario {
 
     @NotEmpty
     private String senha;
+
+    public long getId() {
+        return id;
+    }
+
+
+    public @NotEmpty String getNome() {
+        return nome;
+    }
+
+    public void setNome(@NotEmpty String nome) {
+        this.nome = nome;
+    }
+
+    public @NotEmpty String getEmail() {
+        return email;
+    }
+
+    public void setEmail(@NotEmpty String email) {
+        this.email = email;
+    }
+
+    public @NotEmpty String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(@NotEmpty String senha) {
+        this.senha = senha;
+    }
 }

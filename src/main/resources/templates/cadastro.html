@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro</title>
     <style>
         body {
             background-color: #0d1b2a;
@@ -20,7 +20,7 @@
             background-color: #415a77;
             padding: 30px;
             border-radius: 10px;
-            width: 300px;
+            width: 320px;
         }
 
         h2 {
@@ -65,7 +65,7 @@
         button:hover {
             opacity: 0.9;
         }
-          .link-login {
+         .link-login {
             text-align: center;
             display: block;
             margin-top: 10px;
@@ -81,16 +81,22 @@
 <body>
 
 <div class="container">
-    <h2>Login</h2>
+    <h2>Cadastrar</h2>
     <form method="post">
+        <label for="nome">Nome do usuário</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
 
         <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="Digite sua senha" required>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
 
-        <button type="submit">Entrar</button>
-        <a href="cadastro" class="link-login">Registrar</a>
+        <label for="confirmar">Confirmar senha</label>
+        <input type="password" id="confirmar" placeholder="Repita sua senha" required>
+
+        <button type="submit">Cadastrar</button>
+        <a href="login" class="link-login">Voltar</a>
     </form>
 </div>
 
