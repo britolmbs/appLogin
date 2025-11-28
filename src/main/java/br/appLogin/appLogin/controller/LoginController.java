@@ -30,12 +30,13 @@ public class LoginController {
 
     @PostMapping("/logar")
     public String loginUsuario (Usuario usuario, Model model, HttpServletResponse response) {
-        Usuario user = this.ur.login(usuario.getEmail(), usuario.getSenha());
-        if (user != null) {
+        Usuario usuarioLogado = this.ur.login(usuario.getEmail(), usuario.getSenha());
+        if (usuarioLogado != null) {
+
             return "redirect:/";
         }
         model.addAttribute("erro","Usuario Invalido");
-        return "login/login";
+        return "login";
     }
 
 
